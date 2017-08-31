@@ -1,14 +1,16 @@
 package edu.jlu.yuki.xcache.cache;
 
-public interface ICache<K, V> {
+/**
+ * Storage interface that used by ICache. Store cache data.
+ *
+ */
+public interface IStorage<K, V> {
 
 	/**
 	 * get the value from cache.
 	 * 
 	 * @param key
 	 * @return null if required value dosn't exist.
-	 * @throws NullPointerException
-	 *             if key is null
 	 */
 	public V get(K key);
 
@@ -18,8 +20,7 @@ public interface ICache<K, V> {
 	 * @param key
 	 * @param value
 	 * @return replaced value
-	 * @throws NullPointerException
-	 *             if key or value is null
 	 */
 	public V put(K key, V value);
+
 }
