@@ -7,7 +7,7 @@ public class EasyCacheTest extends TestCase {
 	private ICache<String, String> easyCache;
 
 	protected void setUp() throws Exception {
-		this.easyCache = CacheFactory.getEasyCache(String.class, String.class);
+		this.easyCache = new EasyCache<String, String>();
 	}
 
 	protected void tearDown() throws Exception {

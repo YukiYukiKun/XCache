@@ -3,6 +3,7 @@ package edu.jlu.yuki.xcache.cache;
 /**
  * Used by cache to load data if request data not exists in cache. Implemented
  * by user.
+ * <b>thread safe</b>
  *
  * @param <K>
  * @param <V>

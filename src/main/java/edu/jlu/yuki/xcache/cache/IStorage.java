@@ -2,6 +2,7 @@ package edu.jlu.yuki.xcache.cache;
 
 /**
  * Storage interface that used by ICache. Store cache data.
+ * <b>thread safe</b>
  *
  */
 public interface IStorage<K, V> {
@@ -22,5 +23,10 @@ public interface IStorage<K, V> {
 	 * @return replaced value
 	 */
 	public V put(K key, V value);
+	
+	/**
+	 * clear up cached data.
+	 */
+	public void clear();
 
 }

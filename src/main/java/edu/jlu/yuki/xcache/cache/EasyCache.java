@@ -22,4 +22,7 @@ public class EasyCache<K, V> implements ICache<K, V> {
 		return map.put(checkNotNull(key), checkNotNull(value));
 	}
 
+	public void clear() {
+		this.map.clear();
+	}
 }

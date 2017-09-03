@@ -22,4 +22,9 @@ public interface ICache<K, V> {
 	 *             if key or value is null
 	 */
 	public V put(K key, V value);
+	
+	/**
+	 * clear up cached data.
+	 */
+	public void clear();
 }
