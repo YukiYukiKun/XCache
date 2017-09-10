@@ -30,8 +30,7 @@ public class LoadCache<K, V> implements ICountingCache<K, V> {
 	private final AtomicLong queryCount = new AtomicLong();
 
 	/**
-	 * Constructor. 
-	 * TODO: Better be used by a builder.
+	 * Constructor used directly.
 	 * 
 	 * @param storage
 	 * @param loader
@@ -39,6 +38,16 @@ public class LoadCache<K, V> implements ICountingCache<K, V> {
 	LoadCache(final IStorage<K, V> storage, final ILoader<K, V> loader) {
 		this.storage = checkNotNull(storage);
 		this.loader = checkNotNull(loader);
+	}
+	
+	/**
+	 * Constructor used by builder.
+	 * 
+	 * @param builder
+	 */
+	LoadCache(final LoadCacheBuilder<K, V> builder) {
+		this.storage = builder.storage;
+		this.loader = builder.loader;
 	}
 
 	/*
